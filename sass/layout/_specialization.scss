@@ -1,0 +1,28 @@
+.specialization__list {
+  display: flex;
+  gap: 30px;
+}
+
+.specialization__item {
+  position: relative;
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.specialization__card {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.specialization__description {
+  @include font(700, 14px, 16px);
+  text-transform: uppercase;
+  color: var(--text-color-secondary);
+}

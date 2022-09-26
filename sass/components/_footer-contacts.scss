@@ -1,0 +1,29 @@
+.footer-contacts {
+  margin-top: 20px;
+}
+
+.footer-contacts__link_map {
+  color: var(--text-color-secondary);
+  font-style: normal;
+  transition: color var(--transition-dur-tim);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.footer-contacts__item + .footer-contacts__item {
+  margin-top: 9px;
+}
+
+.footer-contacts__link {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  transition: color var(--transition-dur-tim);
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}

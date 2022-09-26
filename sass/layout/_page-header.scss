@@ -1,0 +1,16 @@
+.logo--header {
+  color: var(--logo-color);
+}
+
+.page-header {
+  @include font(500, 14px, 16px);
+  letter-spacing: 0.02em;
+
+  border-color: var(--background-section-basic);
+  border-bottom: 1px solid #ececec;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}

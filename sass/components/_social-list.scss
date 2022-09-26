@@ -1,0 +1,32 @@
+.social-networks {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-networks__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  transition: background-color var(--transition-dur-tim);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.social-networks__icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  transition: fill var(--transition-dur-tim);
+
+  .social-networks__link:hover &,
+  .social-networks__link:focus & {
+    fill: var(--text-color-secondary);
+  }
+}

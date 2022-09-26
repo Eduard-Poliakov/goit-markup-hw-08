@@ -1,0 +1,25 @@
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--background-hero-footer);
+
+  @include font(400, 14px, 24px);
+
+  .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer-header {
+  display: block;
+  @include font(700, 14px, 16px);
+  text-transform: uppercase;
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+}
+
+.logo--footer {
+  color: var(--text-color-secondary);
+}

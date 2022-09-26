@@ -1,0 +1,24 @@
+.navigation {
+  margin-left: 94px;
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item + .navigation__item {
+  margin-left: 50px;
+}
+
+.navigation__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--header-color);
+  transition: color var(--transition-dur-tim);
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
