@@ -1,15 +1,20 @@
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-
   background-color: var(--background-hero-footer);
-
   @include font(400, 14px, 24px);
+}
 
-  .container {
-    display: flex;
-    align-items: baseline;
-  }
+.page-footer .container {
+  text-align: center;
+}
+
+.container-pos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 60px;
 }
 
 .footer-header {
@@ -22,4 +27,27 @@
 
 .logo--footer {
   color: var(--text-color-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .container-pos {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-footer .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container-pos {
+    text-align: start;
+    flex-direction: row;
+    gap: 70px;
+    align-items: baseline;
+    justify-content: space-evenly;
+    margin-bottom: 0px;
+  }
 }

@@ -1,13 +1,3 @@
-.selection-buttons {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.selection-buttons__item + .selection-buttons__item {
-  margin-left: 8px;
-}
-
 .selection-buttons__projects {
   padding: 6px 22px;
 
@@ -35,12 +25,12 @@
 
 .projects-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
 }
 
 .projects-list__item {
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: 100%;
 }
 
 .projects-list__link {
@@ -100,4 +90,41 @@
 .description__text {
   @include font(400, 18px, 28px);
   color: var(--text-color-secondary);
+}
+
+.selection-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  row-gap: 15px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .selection-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .projects-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .projects-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .selection-buttons {
+    margin-bottom: 50px;
+  }
+
+  .projects-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }

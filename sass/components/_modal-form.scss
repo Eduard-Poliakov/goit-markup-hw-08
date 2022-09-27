@@ -1,7 +1,5 @@
 .modal-form-header {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(700, 20px, 30px);
   text-align: center;
   color: #212121;
   margin-bottom: 12px;
@@ -84,8 +82,7 @@
 
 .modal-form__check {
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.7;
+  @include font(400, 12px, 14px);
   color: var(--text-color);
 }
 
@@ -134,4 +131,13 @@
   margin-left: auto;
   padding: 10px 52px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-header {
+    @include font(700, 20px, 23px);
+  }
+  .modal-form__check {
+    @include font(400, 14px, 24px);
+  }
 }

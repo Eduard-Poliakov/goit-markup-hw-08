@@ -14,7 +14,7 @@
 }
 
 .footer-contacts__item + .footer-contacts__item {
-  margin-top: 9px;
+  margin-top: 8px;
 }
 
 .footer-contacts__link {
@@ -25,5 +25,11 @@
   &:focus,
   &:hover {
     color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-contacts__item + .footer-contacts__item {
+    margin-top: 9px;
   }
 }

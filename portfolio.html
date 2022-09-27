@@ -41,6 +41,11 @@
             </li>
           </ul>
         </nav>
+        <button class="open-mobile-menu-button js-open-menu" type="button" data-mobile-open>
+          <svg class="open-mobile-menu-icon">
+            <use href="./images/icons.svg#icon-open-mobile-menu"></use>
+          </svg>
+        </button>
         <ul class="contacts__list list">
           <li class="contacts__item">
             <a class="contacts__link link" href="mailto:info@devstudio.com"
@@ -59,6 +64,88 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-button js-close-menu" type="button">
+            <svg class="mobile-menu__close-icon">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__nav-list list">
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link link" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a
+                class="mobile-menu__nav-link mobile-menu__nav-link--active link"
+                href="./portfolio.html"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu__nav-item">
+              <a class="mobile-menu__nav-link link" href="">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__contacts-list list">
+            <li class="mobile-menu__contacts-item">
+              <a class="mobile-menu__contacts-link-tel link" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-menu__contacts-item">
+              <a class="mobile-menu__contacts-link-mail link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu__social-networks list">
+            <li class="mobile-menu__social-networks-item">
+              <a
+                class="mobile-menu__social-networks-link link"
+                href="https://www.instagram.com/"
+                lang="en"
+                aria-label="ikon instagram"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >instagram
+              </a>
+            </li>
+            <li class="mobile-menu__social-networks-item">
+              <a
+                class="mobile-menu__social-networks-link link"
+                href="https://twitter.com/"
+                lang="en"
+                aria-label="ikon twitter"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >twitter
+              </a>
+            </li>
+            <li class="mobile-menu__social-networks-item">
+              <a
+                class="mobile-menu__social-networks-link link"
+                href="https://www.facebook.com/"
+                lang="en"
+                aria-label="ikon facebook"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >facebook
+              </a>
+            </li>
+            <li class="mobile-menu__social-networks-item">
+              <a
+                class="mobile-menu__social-networks-link link"
+                href="https://ua.linkedin.com/"
+                lang="en"
+                aria-label="ikon linkedin"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -88,7 +175,42 @@
             <li class="projects-list__item">
               <a class="link projects-list__link" href="">
                 <div class="position-description">
-                  <img src="./images/portfolio_1.jpg" alt="Технокряк" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_1@1x.webp 1x,
+                        ./images/desktop_card_1@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_1@1x.jpg 1x, ./images/desktop_card_1@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_1@1x.webp 1x, ./images/tablet_card_1@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_1@1x.jpg 1x, ./images/tablet_card_1@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_1@1x.webp 1x, ./images/mobile_card_1@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_1@1x.jpg 1x, ./images/mobile_card_1@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Технокряк" />
+                  </picture>
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -106,12 +228,43 @@
             <li class="projects-list__item">
               <a class="link projects-list__link" href="">
                 <div class="position-description">
-                  <img
-                    src="./images/portfolio_2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_2@1x.webp 1x,
+                        ./images/desktop_card_2@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_2@1x.jpg 1x, ./images/desktop_card_2@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_2@1x.webp 1x, ./images/tablet_card_2@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_2@1x.jpg 1x, ./images/tablet_card_2@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_2@1x.webp 1x, ./images/mobile_card_2@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_2@1x.jpg 1x, ./images/mobile_card_2@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Постер New Orlean vs Golden Star" />
+                  </picture>
+
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -131,12 +284,42 @@
             <li class="projects-list__item">
               <a class="link projects-list__link" href="">
                 <div class="position-description">
-                  <img
-                    src="./images/portfolio_3.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_3@1x.webp 1x,
+                        ./images/desktop_card_3@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_3@1x.jpg 1x, ./images/desktop_card_3@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_3@1x.webp 1x, ./images/tablet_card_3@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_3@1x.jpg 1x, ./images/tablet_card_3@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_3@1x.webp 1x, ./images/mobile_card_3@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_3@1x.jpg 1x, ./images/mobile_card_3@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Ресторан Seafood" />
+                  </picture>
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -154,7 +337,42 @@
             <li class="projects-list__item">
               <a class="link projects-list__linkk" href="">
                 <div class="position-description">
-                  <img src="./images/portfolio_4.jpg" alt="Проєкт Prime" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_4@1x.webp 1x,
+                        ./images/desktop_card_4@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_4@1x.jpg 1x, ./images/desktop_card_4@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_4@1x.webp 1x, ./images/tablet_card_4@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_4@1x.jpg 1x, ./images/tablet_card_4@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_4@1x.webp 1x, ./images/mobile_card_4@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_4@1x.jpg 1x, ./images/mobile_card_4@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Проєкт Prime" />
+                  </picture>
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -172,7 +390,42 @@
             <li class="projects-list__item">
               <a class="link projects-list__link" href="">
                 <div class="position-description">
-                  <img src="./images/portfolio_5.jpg" alt="Проєкт Boxes" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_5@1x.webp 1x,
+                        ./images/desktop_card_5@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_5@1x.jpg 1x, ./images/desktop_card_5@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_5@1x.webp 1x, ./images/tablet_card_5@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_5@1x.jpg 1x, ./images/tablet_card_5@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_5@1x.webp 1x, ./images/mobile_card_5@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_5@1x.jpg 1x, ./images/mobile_card_5@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Проєкт Boxes" />
+                  </picture>
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -190,12 +443,42 @@
             <li class="projects-list__item">
               <a class="link projects-list__link" href="">
                 <div class="position-description">
-                  <img
-                    src="./images/portfolio_6.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_6@1x.webp 1x,
+                        ./images/desktop_card_6@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_6@1x.jpg 1x, ./images/desktop_card_6@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_6@1x.webp 1x, ./images/tablet_card_6@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_6@1x.jpg 1x, ./images/tablet_card_6@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_6@1x.webp 1x, ./images/mobile_card_6@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_6@1x.jpg 1x, ./images/mobile_card_6@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Inspiration has no Borders" />
+                  </picture>
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -213,12 +496,42 @@
             <li class="projects-list__item">
               <a class="link projects-list__link" href="">
                 <div class="position-description">
-                  <img
-                    src="./images/portfolio_7.jpg"
-                    alt="Видання Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_7@1x.webp 1x,
+                        ./images/desktop_card_7@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_7@1x.jpg 1x, ./images/desktop_card_7@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_7@1x.webp 1x, ./images/tablet_card_7@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_7@1x.jpg 1x, ./images/tablet_card_7@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_7@1x.webp 1x, ./images/mobile_card_7@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_7@1x.jpg 1x, ./images/mobile_card_7@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Видання Limited Edition" />
+                  </picture>
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -238,7 +551,42 @@
             <li class="projects-list__item">
               <a class="link projects-list__link" href="">
                 <div class="position-description">
-                  <img src="./images/portfolio_8.jpg" alt="Проєкт LAB" width="370" height="294" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_8@1x.webp 1x,
+                        ./images/desktop_card_8@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_8@1x.jpg 1x, ./images/desktop_card_8@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_8@1x.webp 1x, ./images/tablet_card_8@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_8@1x.jpg 1x, ./images/tablet_card_8@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_8@1x.webp 1x, ./images/mobile_card_8@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_8@1x.jpg 1x, ./images/mobile_card_8@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Проєкт LAB" />
+                  </picture>
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -256,12 +604,42 @@
             <li class="projects-list__item">
               <a class="link projects-list__link" href="">
                 <div class="position-description">
-                  <img
-                    src="./images/portfolio_9.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desktop_card_9@1x.webp 1x,
+                        ./images/desktop_card_9@2x.webp 2x
+                      "
+                      media="(min-width: 1200px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/desktop_card_9@1x.jpg 1x, ./images/desktop_card_9@2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/tablet_card_9@1x.webp 1x, ./images/tablet_card_9@2x.webp 2x"
+                      media="(min-width: 768px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/tablet_card_9@1x.jpg 1x, ./images/tablet_card_9@2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/mobile_card_9@1x.webp 1x, ./images/mobile_card_9@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      tupe="imege/webp"
+                    />
+                    <source
+                      srcset="./images/mobile_card_9@1x.jpg 1x, ./images/mobile_card_9@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+                    <img src="#" alt="Growing Business" />
+                  </picture>
                   <div class="description">
                     <p class="description__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -283,92 +661,96 @@
     <!--Підвал-->
     <footer class="page-footer">
       <div class="container">
-        <div class="footer-contacts-container">
-          <a class="logo link" lang="en" href="index.html"
-            >Web<span class="logo--footer">Studio</span></a
-          >
-          <address class="footer-contacts">
-            <ul class="footer-contacts__list list">
-              <li class="footer-contacts__item">
+        <div class="container-pos">
+          <div class="footer-contacts-container">
+            <a class="logo link" lang="en" href="index.html"
+              >Web<span class="logo--footer">Studio</span></a
+            >
+            <address class="footer-contacts">
+              <ul class="footer-contacts__list list">
+                <li class="footer-contacts__item">
+                  <a
+                    class="footer-contacts__link_map link"
+                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="footer-contacts__item">
+                  <a class="footer-contacts__link link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer-contacts__item">
+                  <a class="footer-contacts__link link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-social-container">
+            <strong class="footer-header">Приєднуйтесь</strong>
+            <ul class="social-networks list">
+              <li class="social-networks__item">
                 <a
-                  class="footer-contacts__link_map link"
-                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                  class="social-networks__link social-networks__link-footer"
+                  href="https://www.instagram.com/"
+                  lang="en"
+                  aria-label="ikon instagram"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  >м. Київ, пр-т Лесі Українки, 26</a
                 >
+                  <svg class="social-networks__icon social-networks__icon_footer">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-contacts__item">
-                <a class="footer-contacts__link link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
+              <li class="social-networks__item">
+                <a
+                  class="social-networks__link social-networks__link-footer"
+                  href="https://twitter.com/"
+                  lang="en"
+                  aria-label="ikon twitter"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
                 >
+                  <svg class="social-networks__icon social-networks__icon_footer">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-contacts__item">
-                <a class="footer-contacts__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="social-networks__item">
+                <a
+                  class="social-networks__link social-networks__link-footer"
+                  href="https://www.facebook.com/"
+                  lang="en"
+                  aria-label="ikon facebook"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <svg class="social-networks__icon social-networks__icon_footer">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-networks__item">
+                <a
+                  class="social-networks__link social-networks__link-footer"
+                  href="https://ua.linkedin.com/"
+                  lang="en"
+                  aria-label="ikon linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <svg class="social-networks__icon social-networks__icon_footer">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-social-container">
-          <strong class="footer-header">Приєднуйтесь</strong>
-          <ul class="social-networks list">
-            <li class="social-networks__item">
-              <a
-                class="social-networks__link social-networks__link-footer"
-                href="https://www.instagram.com/"
-                lang="en"
-                aria-label="ikon instagram"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-networks__icon social-networks__icon_footer">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-networks__item">
-              <a
-                class="social-networks__link social-networks__link-footer"
-                href="https://twitter.com/"
-                lang="en"
-                aria-label="ikon twitter"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-networks__icon social-networks__icon_footer">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-networks__item">
-              <a
-                class="social-networks__link social-networks__link-footer"
-                href="https://www.facebook.com/"
-                lang="en"
-                aria-label="ikon facebook"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-networks__icon social-networks__icon_footer">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-networks__item">
-              <a
-                class="social-networks__link social-networks__link-footer"
-                href="https://ua.linkedin.com/"
-                lang="en"
-                aria-label="ikon linkedin"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <svg class="social-networks__icon social-networks__icon_footer">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <form class="footer-form">
           <strong class="footer-header">Підпишіться на розсилку</strong>
@@ -390,5 +772,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
