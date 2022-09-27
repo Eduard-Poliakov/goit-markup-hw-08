@@ -2,15 +2,58 @@
   color: var(--logo-color);
 }
 
-.page-header {
-  @include font(500, 14px, 16px);
-  letter-spacing: 0.02em;
+@media screen and (max-width: 767px) {
+  .page-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
-  border-color: var(--background-section-basic);
-  border-bottom: 1px solid #ececec;
-
-  .container {
+  .page-header > .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+  }
+
+  .open-mobile-menu-button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    line-height: 0;
+    transition: fill var(--transition-dur-tim);
+  }
+
+  .open-mobile-menu-button:hover .open-mobile-menu-icon,
+  .open-mobile-menu-button:focus .open-mobile-menu-icon {
+    fill: var(--accent-color);
+  }
+
+  .open-mobile-menu-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .open-mobile-menu-button {
+    display: none;
+  }
+
+  .page-header {
+    @include font(500, 12px, 14px);
+    letter-spacing: 0.02em;
+
+    border-color: var(--background-section-basic);
+    border-bottom: 1px solid #ececec;
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    @include font(500, 14px, 16px);
   }
 }

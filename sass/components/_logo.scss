@@ -1,7 +1,13 @@
 .logo {
-  @include font(700, 26px, 31px);
+  @include font(700, 24px, 28px);
   color: var(--accent-color);
   font-family: $fontLogo;
 
-  display: inline-block;
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font(700, 26px, 31px);
+  }
 }
