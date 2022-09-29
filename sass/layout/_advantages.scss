@@ -26,6 +26,7 @@
 }
 
 .advantages__title {
+  text-align: center;
   @include font(700, 14px, 16px);
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -36,7 +37,7 @@
   color: var(--text-color);
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .advantages__list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -45,6 +46,9 @@
 
   .advantages__item {
     flex-basis: calc((100% - 30px) / 2);
+  }
+  .advantages__title {
+    text-align: start;
   }
 }
 

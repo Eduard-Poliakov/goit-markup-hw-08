@@ -1,6 +1,10 @@
 .logo--header {
   color: var(--logo-color);
 }
+.page-header {
+  border-color: var(--background-section-basic);
+  border-bottom: 1px solid #ececec;
+}
 
 @media screen and (max-width: 767px) {
   .page-header {
@@ -41,9 +45,6 @@
   .page-header {
     @include font(500, 12px, 14px);
     letter-spacing: 0.02em;
-
-    border-color: var(--background-section-basic);
-    border-bottom: 1px solid #ececec;
 
     .container {
       display: flex;

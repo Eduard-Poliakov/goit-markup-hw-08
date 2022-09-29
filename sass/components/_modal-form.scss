@@ -81,6 +81,8 @@
 }
 
 .modal-form__check {
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
   @include font(400, 12px, 14px);
   color: var(--text-color);
@@ -92,6 +94,7 @@
 }
 
 .modal-form__custom-checkbox {
+  flex-shrink: 0;
   width: 16px;
   height: 15px;
   margin-left: 12px;
